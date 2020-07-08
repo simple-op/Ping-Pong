@@ -87,11 +87,13 @@ document.addEventListener("keypress",function(event){
    let back=false;
    let backing=false;
    let backingt=false;
-
+    let counter=0;
+    let container=document.getElementById("container");
    ball.addEventListener("click",function(){
 
-
+         
     let stop= setInterval(
+          
         function(){
          if(countl<=count&count<=countl+20&(countt>=90))
               backt=true;
@@ -102,7 +104,7 @@ document.addEventListener("keypress",function(event){
              backt=false;
          }
          
-        
+         counter+=1;
          if(backt){
              console.log('sd');
 
@@ -146,7 +148,7 @@ document.addEventListener("keypress",function(event){
            count+=0.15;
 
           
-          
+        
           
            
         
@@ -166,10 +168,20 @@ document.addEventListener("keypress",function(event){
               ball.style.left=count+"vw";
               ball.style.top=countt+"vh";
               countl=count;
+               
 
-              alert("gameover");
+
+              if(localStorage.getItem('score')==null){
+                localStorage.setItem('score',counter);
+              }
+             else if(localStorage.getItem('score')<counter)
+              localStorage.setItem('score',counter);
+
+              alert("|Gameover| Your Score is:"+Math.trunc(counter/100) +" High Score:"+ Math.trunc(localStorage.getItem('score')/100));
+             
+              counter=0;
               clearInterval(stop);
-
+           
            }
 
             
