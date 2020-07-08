@@ -1,0 +1,36 @@
+
+
+
+#ball{
+    border-radius: 50%;
+    margin: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient(black,white);
+    text-align: center;
+}
+#bar1{
+    width: 20vw;
+    height: 10px;
+    border:solid;
+    border-radius: 5px; 
+    background-color: darkred;   
+    position: absolute;
+    top: 0%;
+}
+
+#bar2{
+    width: 20vw;
+    height: 10px;
+    border:solid;
+    border-radius: 5px;
+    background-color: darkred;   
+    position: absolute;
+    bottom: 0%;
+    animation: linear;
+
+}
