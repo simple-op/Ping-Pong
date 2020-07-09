@@ -1,6 +1,22 @@
+#start{
 
+    padding: 10px;
+    font-weight: bold;
+    font-size: x-large;
+    background-color:transparent;
+    cursor: pointer;
+    text-shadow : 0 4px 4px azure;
+    
+
+}
 #container{
     text-align: center;
+    /* background-color: black; */
+}
+body{
+    /* background-color: black; */
+    background-image: url(abc.png);
+
 }
 
 #ball{
@@ -14,6 +30,7 @@
     height: 20px;
     background-image: linear-gradient(black,white);
     text-align: center;
+    animation: ball 2s  linear infinite ;
 }
 #bar1{
     width: 20vw;
@@ -34,5 +51,16 @@
     position: absolute;
     bottom: 0%;
     animation: linear;
+
+}
+
+@keyframes ball{
+
+  
+    100%{
+       transform: rotate(360deg);
+       /* transform: rotatex(360deg); */
+
+    }
 
 }

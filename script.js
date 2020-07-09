@@ -4,24 +4,17 @@ let bar2=document.getElementById('bar2');
 
 
 let countl=0;
+let speedbar=2;
 bar1.style.left=countl+"vw";
 bar2.style.left=countl+"vw";
-if(countl<0){
-    countl=0;
-    
-}
-if(countl>78){
-   
-   countl=78;
-    
-}
+
 
 
 document.addEventListener("keypress",function(event){
 
     // console.log(event.keyCode);
     if(countl<2){
-        countl=2;
+        countl=0;
         
     }
     if(countl>78){
@@ -33,7 +26,7 @@ document.addEventListener("keypress",function(event){
     bar1.style.left=countl+"vw";
     bar2.style.left=countl+"vw";
    //  bar2.style.colo
-    countl-=2;
+    countl-=speedbar;
     
     }
     else if(event.keyCode==65){
@@ -42,7 +35,7 @@ document.addEventListener("keypress",function(event){
        bar1.style.left=countl+"vw";
        bar2.style.left=countl+"vw";
        
-       countl+=2;
+       countl+=speedbar;
        }
 
     //    console.log(countl);
@@ -58,6 +51,15 @@ document.addEventListener("keypress",function(event){
 
     //  console.log(event.keyCode);
      
+    if(countl<2){
+        countl=0;
+        
+    }
+    if(countl>78){
+       
+       countl=78;
+        
+    }
      if(event.keyCode==68){
      bar1.style.left=countl+"vw";
      bar2.style.left=countl+"vw";
@@ -88,8 +90,11 @@ document.addEventListener("keypress",function(event){
    let backing=false;
    let backingt=false;
     let counter=0;
+    let speed=0.15;
     let container=document.getElementById("container");
-   ball.addEventListener("click",function(){
+    let start=document.getElementById('start');
+   start.addEventListener("click",function(){
+       start.style.display='none';
 
          
     let stop= setInterval(
@@ -105,6 +110,10 @@ document.addEventListener("keypress",function(event){
          }
          
          counter+=1;
+         if(counter/100%20==0){
+            speed=speed+0.02;
+            speedbar+=0.02;
+         }
          if(backt){
              console.log('sd');
 
@@ -119,9 +128,9 @@ document.addEventListener("keypress",function(event){
          }
 
          if(backing)
-         countt-=0.15;
+         countt-=speed;
            else
-           countt+=0.15;
+           countt+=speed;
           
          
 
@@ -143,9 +152,9 @@ document.addEventListener("keypress",function(event){
 
         //    ball.style.top=count+'%';
            if(back)
-           count-=0.15;
+           count-=speed;
            else
-           count+=0.15;
+           count+=speed;
 
           
         
@@ -162,12 +171,15 @@ document.addEventListener("keypress",function(event){
 
 
            if(countt>100|countt<-1){
+               speed=0.15;
+               speedbar=2;
                count=Math.random()*100.0;
                console.log(Math.random());
               countt=0;
               ball.style.left=count+"vw";
               ball.style.top=countt+"vh";
-              countl=count;
+              start.style.display='inherit';
+              
                
 
 
