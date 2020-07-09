@@ -64,7 +64,7 @@ document.addEventListener("keypress",function(event){
      bar1.style.left=countl+"vw";
      bar2.style.left=countl+"vw";
     //  bar2.style.colo
-     countl+=2;
+     countl+=speedbar;
      
      }
      else if(event.keyCode==65){
@@ -73,7 +73,7 @@ document.addEventListener("keypress",function(event){
         bar1.style.left=countl+"vw";
         bar2.style.left=countl+"vw";
         
-        countl-=2;
+        countl-=speedbar;
         }
 
         // console.log(countl);
@@ -103,7 +103,7 @@ document.addEventListener("keypress",function(event){
         function(){
          if(countl<=count&count<=countl+20&(countt>=90))
               backt=true;
-         else if(countl<=count&count<=countl+20&(countt<=2))  
+         else if(countl<=count&count<=countl+20&(countt<=0))  
               backt=true;
               
          else{
@@ -111,7 +111,8 @@ document.addEventListener("keypress",function(event){
          }
          
          counter+=1;
-         scores.innerText=Math.trunc(counter/100);
+        //  scores.innerText=Math.trunc(counter/100);
+        scores.innerText=Math.trunc(counter/100);
          
          if(counter/100%20==0){
             speed=speed+0.02;
@@ -178,11 +179,14 @@ document.addEventListener("keypress",function(event){
                speedbar=2;
                count=Math.random()*100.0;
                console.log(Math.random());
-              countt=0;
-              ball.style.left=count+"vw";
-              ball.style.top=countt+"vh";
-              start.style.display='inherit';
-              
+               countt=0;
+               
+               ball.style.left=count+"vw";
+               ball.style.top=countt+"vh";
+               start.style.display='inherit';
+              backing=false;
+              back=false;
+
                
 
 
@@ -192,7 +196,7 @@ document.addEventListener("keypress",function(event){
              else if(localStorage.getItem('score')<counter)
               localStorage.setItem('score',counter);
 
-              alert("|Gameover| Your Score is:"+Math.trunc(counter/100) +" High Score:"+ Math.trunc(localStorage.getItem('score')/100));
+              alert("|Gameover| Your Score is : "+Math.trunc(counter/100) +" *High Score* : "+ Math.trunc(localStorage.getItem('score')/100));
              
               counter=0;
               clearInterval(stop);
