@@ -10,9 +10,46 @@ bar2.style.left=countl+"vw";
 
 
 
-document.addEventListener("keypress",function(event){
+// document.addEventListener("keypress",function(event){
 
-    // console.log(event.keyCode);
+//     // console.log(event.keyCode);
+//     if(countl<2){
+//         countl=0;
+        
+//     }
+//     if(countl>78){
+       
+//        countl=78;
+        
+//     }
+//     if(event.keyCode==68){
+//     bar1.style.left=countl+"vw";
+//     bar2.style.left=countl+"vw";
+//    //  bar2.style.colo
+//     countl-=speedbar;
+    
+//     }
+//     else if(event.keyCode==65){
+//        // bar1.style.left=00;
+//        // bar2.style.left=00;
+//        bar1.style.left=countl+"vw";
+//        bar2.style.left=countl+"vw";
+       
+//        countl+=speedbar;
+//        }
+
+//     //    console.log(countl);
+       
+
+    
+//   })
+ 
+
+   
+
+   document.addEventListener("keydown",function(event){
+
+    //  console.log(event.keyCode);
     if(countl<2){
         countl=0;
         
@@ -22,34 +59,6 @@ document.addEventListener("keypress",function(event){
        countl=78;
         
     }
-    if(event.keyCode==68){
-    bar1.style.left=countl+"vw";
-    bar2.style.left=countl+"vw";
-   //  bar2.style.colo
-    countl-=speedbar;
-    
-    }
-    else if(event.keyCode==65){
-       // bar1.style.left=00;
-       // bar2.style.left=00;
-       bar1.style.left=countl+"vw";
-       bar2.style.left=countl+"vw";
-       
-       countl+=speedbar;
-       }
-
-    //    console.log(countl);
-       
-
-    
-  })
- 
-
-   
-
-   document.addEventListener("keydown",function(event){
-
-    //  console.log(event.keyCode);
      
     if(countl<2){
         countl=0;
