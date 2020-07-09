@@ -93,9 +93,10 @@ document.addEventListener("keypress",function(event){
     let speed=0.15;
     let container=document.getElementById("container");
     let start=document.getElementById('start');
+    let scores=document.getElementById("scores");
    start.addEventListener("click",function(){
        start.style.display='none';
-
+      
          
     let stop= setInterval(
           
@@ -110,6 +111,8 @@ document.addEventListener("keypress",function(event){
          }
          
          counter+=1;
+         scores.innerText=Math.trunc(counter/100);
+         
          if(counter/100%20==0){
             speed=speed+0.02;
             speedbar+=0.02;

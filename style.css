@@ -6,8 +6,17 @@
     background-color:transparent;
     cursor: pointer;
     text-shadow : 0 4px 4px azure;
+    animation: color 2s  ease-in-out infinite ;
+    font-family: monospace;
+    color: white;
+
     
 
+}
+#info{
+
+    float:right;
+    animation: none;
 }
 #container{
     text-align: center;
@@ -26,11 +35,11 @@ body{
     margin-bottom: 15px;
     
     position: relative;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-image: linear-gradient(black,white);
     text-align: center;
-    animation: ball 2s  linear infinite ;
+    animation: ball 2s  linear infinite alternate ;
 }
 #bar1{
     width: 20vw;
@@ -63,4 +72,34 @@ body{
 
     }
 
+}
+@keyframes color{
+
+  
+       
+
+    0%{
+        
+       transform: scale(1.2);
+       /* transform: rotatex(360deg); */
+
+    }
+    50%{
+
+       transform: scale(1.5);
+
+    }
+    100%{
+       transform: scale(1.2);
+
+    }
+}
+
+#score{
+    position: fixed;
+    top: 40%;
+    right: 0%;
+    padding: 10px;
+    font-size: xx-large;
+    color: aliceblue;
 }
