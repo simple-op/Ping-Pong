@@ -43,20 +43,23 @@ body{
 }
 #bar1{
     width: 20vw;
-    height: 10px;
+    height: 12px;
     border:solid;
+    border-width:0.5px ;
     border-radius: 5px; 
-    background-color: darkred;   
+    background-image: linear-gradient(red,white);   
     position: absolute;
     top: 0%;
 }
 
 #bar2{
     width: 20vw;
-    height: 10px;
+    height: 12px;
     border:solid;
     border-radius: 5px;
-    background-color: darkred;   
+    border-width:0.5px ;
+    background-image: linear-gradient(white,red);   
+
     position: absolute;
     bottom: 0%;
     animation: linear;

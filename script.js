@@ -120,9 +120,11 @@ document.addEventListener("keypress",function(event){
          }
          if(backt){
              console.log('sd');
+             
 
             if(countt>90){
                 console.log('sd');
+                
              
                 backing=true;
             }
