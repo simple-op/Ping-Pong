@@ -45,7 +45,7 @@ bar2.style.left=countl+"vw";
 //   })
  
 
-   const interval = null;
+ let interval = null;
 
   function run(event){
   interval=setInterval(()=>{
