@@ -45,10 +45,10 @@ bar2.style.left=countl+"vw";
 //   })
  
 
-   
+   const interval = null;
 
-   document.addEventListener("keydown",function(event){
-
+  function run(event){
+  interval=setInterval(()=>{
     //  console.log(event.keyCode);
     if(countl<2){
         countl=0;
@@ -87,9 +87,30 @@ bar2.style.left=countl+"vw";
 
         // console.log(countl);
         
+   
+   },1}
+  }
+ 
+  
+
+   document.addEventListener("keypress",function(event){
+
+     if(event.keyCode==65||event.keyCode==68){
+     
+     }
+           run(event)
 
      
    })
+   
+     document.addEventListener("keyup",function(event){
+
+    clearInterval(interval);
+
+     
+   })
+   
+   
 
    let ball=document.getElementById("ball");
    let count=0;
