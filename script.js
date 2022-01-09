@@ -88,7 +88,7 @@ bar2.style.left=countl+"vw";
         // console.log(countl);
         
    
-   },1}
+   },1)
   }
  
   
