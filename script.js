@@ -96,9 +96,9 @@ bar2.style.left=countl+"vw";
    document.addEventListener("keypress",function(event){
 
      if(event.keyCode==65||event.keyCode==68){
-     
+     run(event)
      }
-           run(event)
+           
 
      
    })
